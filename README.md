@@ -20,6 +20,7 @@ limitations under the License.
 CodeBlocks is a powerful VS Code/Antigravity extension that **visualizes your codebase** using generic intelligence. It moves beyond static class diagrams to generate **Conceptual Architecture Maps**, **Process Flows**, and **Component Graphs** on the fly.
 
 ![Graph Preview](images/banner_preview.png)
+![Dark Mode](images/dark_mode.png)
 
 ## ✨ Key Features (Current)
 
@@ -106,4 +107,4 @@ For enterprise inquiries or just to say hi:
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
 
 ---
-*Built by Pavan with ❤️ for Developers.*
+*Built by Pavan for developers.*
