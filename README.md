@@ -81,7 +81,21 @@ Break down language barriers.
 
 ## 🛠️ Configuration
 
-*   **`codeblocks.ignoredFolders`**: List of folders to exclude from analysis (default: `node_modules`, `dist`, etc.).
+### 1. LLM Setup (Required for AI Features)
+CodeBlocks uses Generative AI to infer high-level architecture and process flows. 
+You must configure an LLM provider:
+
+1.  Open **VS Code Settings** (`Ctrl+,`).
+2.  Search for `CodeBlocks`.
+3.  **Provider**: Select `gemini` (default) or `openai`.
+4.  **API Key**: Enter your API key.
+    *   **Gemini**: [Get a free key here](https://aistudio.google.com/app/apikey)
+    *   **OpenAI**: [Get a key here](https://platform.openai.com/api-keys)
+5.  **Model**: (Optional) Customize the model (e.g., `gemini-2.5-flash-lite` or `gpt-4`).
+
+### 2. General Settings
+*   **`codeblocks.ignoredFolders`**: List of folders to exclude from analysis (default: `node_modules`, `dist`, `out`, `coverage`).
+
 
 ## 🤝 Contributing & Support
 
