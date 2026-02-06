@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build Outputs
+/out
+/dist
+*.vsix
+
+# Testing
+.vscode-test/
+coverage/
+
+# Logs
+*.log
+
+# VS Code / Editor specific
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# Environment
+.env
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+/node_modules

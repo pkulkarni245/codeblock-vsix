@@ -1,0 +1,111 @@
+{
+  "name": "codeblocks-visualization",
+  "displayName": "CodeBlocks",
+  "description": "Visualizes code structure as colorful blocks",
+  "license": "Apache-2.0",
+  "publisher": "codeblocks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pkulkarni245/codeblock-vsix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pkulkarni245/codeblock-vsix/issues"
+  },
+  "homepage": "https://github.com/pkulkarni245/codeblock-vsix#readme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeblocks.toggle",
+        "title": "CodeBlocks: Toggle Block Mode"
+      },
+      {
+        "command": "codeblocks.configure",
+        "title": "CodeBlocks: Configure Extension"
+      },
+      {
+        "command": "codeblocks.showGraph",
+        "title": "CodeBlocks: Show Call Graph (Beta)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "codeblocks.toggle",
+        "key": "ctrl+p ctrl+k",
+        "mac": "cmd+p cmd+k",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "CodeBlocks",
+      "properties": {
+        "codeblocks.llm.provider": {
+          "type": "string",
+          "default": "gemini",
+          "enum": [
+            "gemini",
+            "openai"
+          ],
+          "description": "The LLM provider to use for code summarization."
+        },
+        "codeblocks.llm.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key for the selected LLM provider."
+        },
+        "codeblocks.llm.model": {
+          "type": "string",
+          "default": "gemini-1.5-flash",
+          "description": "The model name to use (e.g., gemini-1.5-flash, gemini-pro, gpt-4o-mini, gpt-3.5-turbo)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "process": "^0.11.10",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.1.3",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "@types/dagre": "^0.7.53",
+    "dagre": "^0.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reactflow": "^11.11.4"
+  }
+}
