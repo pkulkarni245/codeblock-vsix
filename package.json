@@ -3,7 +3,7 @@
   "displayName": "CodeBlocks",
   "description": "Visualizes code structure as colorful blocks",
   "license": "Apache-2.0",
-  "publisher": "codeblocks",
+  "publisher": "pkulkarni245",
   "repository": {
     "type": "git",
     "url": "https://github.com/pkulkarni245/codeblock-vsix.git"
