@@ -12,7 +12,7 @@
     "url": "https://github.com/pkulkarni245/codeblock-vsix/issues"
   },
   "homepage": "https://github.com/pkulkarni245/codeblock-vsix#readme",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.85.0"
   },
